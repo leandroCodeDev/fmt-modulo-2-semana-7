@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {RouterModule} from '@angular/router';
 import { HeaderComponent } from '../shared/components/header/header.component';
 import { SidebarComponent } from '../shared/components/sidebar/sidebar.component';
+import {CommonModule} from '@angular/common';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { SidebarComponent } from '../shared/components/sidebar/sidebar.component
   imports: [
     RouterModule,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    CommonModule
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
