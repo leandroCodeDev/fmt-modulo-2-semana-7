@@ -1,1 +1,11 @@
-<p>disciplinas works!</p>
+<!-- course-subjects.component.html -->
+<mat-card class="subjects-card">
+    <h2>Disciplinas do Curso</h2>
+    <div *ngFor="let semester of semesters">
+      <h3>{{semester.semester}}</h3>
+      <mat-card *ngFor="let subject of semester.subjects" class="subject-card">
+        <mat-card-title>{{subject}}</mat-card-title>
+      </mat-card>
+    </div>
+  </mat-card>
+  
