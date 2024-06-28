@@ -1,0 +1,28 @@
+/* student-registration.component.scss */
+.registration-card {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title-card{
+    color: #e9e0e4;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+  .buttons{
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    
+  }
+
+  .text-button{
+    font-size: 20px
+  }
