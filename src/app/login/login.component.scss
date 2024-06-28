@@ -1,0 +1,29 @@
+/* login.component.scss */
+.login-form {
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+.title-card{
+    color: #e9e0e4;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+  .row {
+    width: 100%;
+  }
+
+  .buttons{
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    
+  }
+
+  .text-button{
+    font-size: 18px
+  }
