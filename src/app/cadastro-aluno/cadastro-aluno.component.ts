@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -34,9 +34,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './cadastro-aluno.component.html',
   styleUrl: './cadastro-aluno.component.scss'
 })
-export class CadastroAlunoComponent {
+export class CadastroAlunoComponent implements OnInit{
   studentForm: FormGroup;
   courses: string[] = ['Curso A', 'Curso B', 'Curso C'];
+  editingStudent: any;
 
   constructor(
     private fb: FormBuilder,
@@ -50,6 +51,14 @@ export class CadastroAlunoComponent {
       phone: ['', Validators.required],
       course: ['', Validators.required]
     });
+  }
+
+  ngOnInit(): void {
+    const state = history.state;
+    if (state && state.student) {
+      this.editingStudent = state.student;
+      this.studentForm.patchValue(this.editingStudent);
+    }
   }
 
   onSubmit() {
