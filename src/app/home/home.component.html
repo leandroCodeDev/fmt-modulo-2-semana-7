@@ -1,1 +1,27 @@
-<p>home works!</p>
+<!-- home.component.html -->
+<mat-card class="home-card">
+  <h2>Próximas Atividades</h2>
+  <div class="card-container">
+    <mat-card *ngFor="let activity of upcomingActivities" class="activity-card">
+      <mat-card-title>{{activity.title}}</mat-card-title>
+      <mat-card-content>{{activity.description}}</mat-card-content>
+      <mat-card-footer>Até: {{activity.dueDate | date}}</mat-card-footer>
+    </mat-card>
+  </div>
+
+  <h2>Minhas Disciplinas</h2>
+  <div class="card-container">
+    <mat-card *ngFor="let subject of currentSubjects" class="subject-card">
+      <mat-card-title>{{subject.name}}</mat-card-title>
+      <mat-card-content>{{subject.description}}</mat-card-content>
+    </mat-card>
+  </div>
+
+  <h2>Cursos Extras</h2>
+  <div class="card-container">
+    <mat-card *ngFor="let extraCourse of extraCourses" class="extra-course-card">
+      <mat-card-title>{{extraCourse.name}}</mat-card-title>
+      <mat-card-content>{{extraCourse.description}}</mat-card-content>
+    </mat-card>
+  </div>
+</mat-card>

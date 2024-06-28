@@ -1,0 +1,37 @@
+/* home.component.scss */
+.home-card {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    color: #e9e0e4;
+  }
+  
+  h2 {
+    margin: 1rem 0;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .activity-card, .subject-card, .extra-course-card {
+    width: calc(33% - 1rem);
+    margin-bottom: 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .activity-card, .subject-card, .extra-course-card {
+      width: calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .activity-card, .subject-card, .extra-course-card {
+      width: 100%;
+    }
+  }
+  
